@@ -3,7 +3,7 @@ var app = express()
 var bodyParser = require('body-parser')
 var cors = require('cors')
 const fileUpload = require('express-fileupload');
-var gi = require(`gitignore`);
+const port = 8080
 require('dotenv').config()
 app.use(bodyParser.json())
 app.use(cors())
