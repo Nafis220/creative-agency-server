@@ -3,11 +3,13 @@ var app = express()
 var bodyParser = require('body-parser')
 var cors = require('cors')
 const fileUpload = require('express-fileupload');
+var gi = require(`gitignore`);
 require('dotenv').config()
 app.use(bodyParser.json())
 app.use(cors())
 app.use(express.static('services'));
-app.use(fileUpload())
+app.use(fileUpload());
+
 app.get('/', function (req, res) {
   res.send('hello world')
 })
